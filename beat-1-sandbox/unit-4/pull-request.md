@@ -28,7 +28,7 @@ fields.
 
 **Run history**
 
-Two runs, both full 20-package runs on the Sonnet grader the harness pins.
+Two harness runs total: one 3-package smoke run and one full 20-package run on the Sonnet grader the harness pins.
 
 1. Smoke run (3 packages, `--limit 3`, no `--save-run`): `agreement: 3/3 scored items` —
    pkg-01 (standards-wall) reject✓, pkg-02 (clear-accept) accept✓, pkg-03 (silent-drift)
