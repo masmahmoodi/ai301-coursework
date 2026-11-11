@@ -1,4 +1,4 @@
-# Contribution: [Issue Title]
+# Contribution: Open Source Contribution — In Progress
 
 Path: `beat-2-contribution/contribution-story.md`
 
@@ -7,12 +7,11 @@ the repository is not read. **Keep every section header below under its exact na
 format criteria grade exactly that. Your course repo link is the whole submission: no tool
 files and no evidence uploads are part of Assignment 5.
 
-**Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
-**Pull Request:** [GitHub PR link, once opened]
+**Contribution Number:** 1
+**Student:** Masoud Mahmoodi
+**GitHub Username:** masmahmoodi
+**Issue:** claim pending — November 8, 2026
+**Pull Request:** not opened yet
 
 One repository, built across units 5 to 8, telling the whole story of your real
 contribution. Fill it as you work, not at the end — the sections below ask for evidence that
@@ -55,10 +54,9 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Searched and evaluated real open-source issue candidates**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I used the AI301 Issue Selection site to search for issues matching my background in Python, JavaScript, TypeScript, backend development, APIs, and AI-related work. I filtered for tags such as `good first issue`, `bug`, `improvement`, and `help wanted`, then inspected several candidates including CodeGraphContext #614, Red-DiscordBot #6794, and OpenELIS-Global-2 #3660. The main problem I found was that an issue could still appear open and beginner-friendly even when another contributor already had a linked pull request or the maintainer had changed the scope. Because of that, I changed my selection process to also check the full issue thread, linked PRs, assignees, and recent maintainer comments before treating an issue as available.
 
 **Unit 6: [one line on the tool work]**
 
