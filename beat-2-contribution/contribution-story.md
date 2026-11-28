@@ -205,7 +205,7 @@ The feature's absence was confirmed by reading the actual source:
 **Toolkit**
 
 - Tool: `git`, `pnpm` (local), used to clone, branch, implement, and verify
-- What it produced: 4 files changed, commit `cbf1be6`, all checks green (see test evidence)
+- What it produced: 4 files changed, commit `cbf1be6`; focused feature tests passed (5/5), type checking passed, and lint passed with 3 unrelated existing warnings; the full test suite had 14 suites pass and 1 unrelated pre-existing UnoCSS test-environment failure (see test evidence)
 - Difficulties: Biome lint flagged the initial `forEach(b => result.add(b))` as returning a non-void value inside a callback — fixed with `for...of`; `ProcessInPersonMeetings.location` was not a plain string as initially assumed — fixed after reading the actual source
 - What changed: I added `utils.ts` to the scope (not in the initial plan from API exploration) because a pure function there is the right design; I used `ReadonlySet<string>` instead of `string[]` for the prop type to make immutability explicit
 
@@ -279,7 +279,7 @@ Implemented feature on branch `feat/highlight-enrolled-buildings`:
 - `CampusMap.tsx`: added `highlightedBuildings?: ReadonlySet<string>` to props; added enrolled buildings to `importantBuildings` via `for...of`; updated fill ternary to check `highlightedBuildings?.has(id)` before the existing building type check
 - New test file `src/views/components/map/tests/extractEnrolledBuildings.test.ts`
 
-All checks passed. Committed as `cbf1be6`.
+Focused feature tests passed (5/5), type checking passed, and lint passed with 3 unrelated existing warnings; the full test suite had 14 suites pass and 1 unrelated pre-existing UnoCSS test-environment failure. Committed as `cbf1be6`.
 
 Created `plan.md`, `plan-comment.md`, `pr_draft.md`, `test_evidence.md`, and `ship-manifest.md` in the fork directory. Manually evaluated plan-check criteria (5 checks, all PASS, verdict: ACCEPT) and pr-precheck criteria (4 checks, all PASS, verdict: ACCEPT) by reading each criterion and assessing it against the plan and diff; no executable plan-check or pr-precheck tool exists on this machine. Results recorded in `ship-manifest.md`. This evaluation was done after implementation; next time I would apply the rubric before writing the first line of implementation code.
 
@@ -290,7 +290,7 @@ User forked repo, pushed branch, opened PR: https://github.com/Longhorn-Develope
 **Toolkit**
 
 - Tool: git clone + pnpm (local), used to run type checking, linting, tests, and create all working files; plan-check and pr-precheck rubric criteria evaluated manually (no executable tool exists)
-- What it produced: 4 source files changed, 5 tests passing, all checks green; manual rubric review recorded ACCEPT for plan-check (5/5) and pr-precheck (4/4) in `ship-manifest.md`
+- What it produced: 4 source files changed; focused feature tests passed (5/5), type checking passed, and lint passed with 3 unrelated existing warnings; the full test suite had 14 suites pass and 1 unrelated pre-existing UnoCSS test-environment failure; manual rubric review recorded ACCEPT for plan-check (5/5) and pr-precheck (4/4) in `ship-manifest.md`
 - Difficulties: gh CLI not installed — fork and PR required browser action; check-runs API 404'd for cbf1be6 short SHA so CI results were not available via API; `mergeable_state: "unstable"` on the PR API suggests CI is running or has an issue; no executable plan-check or pr-precheck tool exists so criteria had to be applied manually
 - What changed: will install gh CLI before next contribution to avoid all browser-dependent steps; would run rubric criteria before implementation, not after
 
